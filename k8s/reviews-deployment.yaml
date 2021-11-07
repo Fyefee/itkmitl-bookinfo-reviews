@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bookinfo-dev-details
+  name: bookinfo-dev-reviews
   namespace: student19-bookinfo-dev
   labels:
-    app: bookinfo-dev-details
+    app: bookinfo-dev-reviews
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bookinfo-dev-details
+      app: bookinfo-dev-reviews
   template:
     metadata:
       labels:
-        app: bookinfo-dev-details
+        app: bookinfo-dev-reviews
     spec:
       containers:
-      - name: bookinfo-dev-details
-        image: ghcr.io/fyefee/bookinfo-details:dev
+      - name: bookinfo-dev-reviews
+        image: ghcr.io/fyefee/bookinfo-reviews:dev
         imagePullPolicy: Always
       imagePullSecrets:
       - name: registry-bookinfo
