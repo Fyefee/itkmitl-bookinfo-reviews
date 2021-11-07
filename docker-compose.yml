@@ -3,4 +3,4 @@ services:
     build: .
     image: ghcr.io/fyefee/bookinfo-reviews:dev
     ports:
-      - "8082:8082"
+      - "8082:9080"
